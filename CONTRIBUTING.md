@@ -1,5 +1,9 @@
 # Contributing to Cosmos Cookbook
 
+**📖 Dostępne wersje / Available versions:**
+- 🇵🇱 [Wersja polska / Polish version](CONTRIBUTING_PL.md) - z dodatkowymi wyjaśnieniami dla studentów
+- 🇬🇧 English version (this document)
+
 The Cosmos Cookbook is a community-driven resource for sharing practical knowledge about the NVIDIA Cosmos ecosystem. We welcome contributions including workflows, recipes, best practices, and domain-specific adaptations.
 
 ## What to Contribute
