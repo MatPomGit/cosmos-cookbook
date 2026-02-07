@@ -1,182 +1,227 @@
-# Cosmos Cookbook
+# Cosmos Cookbook (Książka kucharska Cosmos)
 
-[![Documentation](https://img.shields.io/badge/docs-cosmos--cookbook-blue)](https://nvidia-cosmos.github.io/cosmos-cookbook/)
-[![Contributing](https://img.shields.io/badge/contributing-guide-green)](CONTRIBUTING.md)
+[![Dokumentacja](https://img.shields.io/badge/docs-cosmos--cookbook-blue)](https://nvidia-cosmos.github.io/cosmos-cookbook/)
+[![Przewodnik współtworzenia](https://img.shields.io/badge/contributing-guide-green)](CONTRIBUTING.md)
 
-A comprehensive guide for working with the **NVIDIA Cosmos ecosystem**—a suite of World Foundation Models (WFMs) for real-world, domain-specific applications across robotics, simulation, autonomous systems, and physical scene understanding.
+Kompleksowy przewodnik do pracy z **ekosystemem NVIDIA Cosmos**—zestawem modeli fundamentowych świata (World Foundation Models - WFMs) dla rzeczywistych, specyficznych dla domeny zastosowań w robotyce, symulacji, systemach autonomicznych i rozumieniu scen fizycznych.
 
-**📚 [View the Full Documentation →](https://nvidia-cosmos.github.io/cosmos-cookbook/)** — Step-by-step workflows, case studies, and technical recipes
+**📚 [Zobacz pełną dokumentację →](https://nvidia-cosmos.github.io/cosmos-cookbook/)** — Przepływy pracy krok po kroku, studia przypadków i przepisy techniczne
+
+---
+
+## 🎓 Dla studentów i osób uczących się
+
+Ten projekt jest idealny dla studentów i początkujących, którzy chcą nauczyć się AI fizycznego (Physical AI). **NVIDIA Cosmos** to zestaw zaawansowanych modeli sztucznej inteligencji, które potrafią:
+
+- **Rozumieć i generować wideo** - tworzenie realistycznych sekwencji wideo na podstawie opisów tekstowych
+- **Przewidywać przyszłość** - symulowanie tego, co może się wydarzyć w świecie fizycznym
+- **Rozumować o świecie fizycznym** - odpowiadanie na pytania o to, co dzieje się na wideo lub obrazach
+- **Przetwarzać i kuratorować dane wideo** - przygotowywanie dużych zbiorów danych do treningu modeli
+
+**Co wyróżnia ten przewodnik?**
+- Szczegółowe wyjaśnienia krok po kroku
+- Komentarze w kodzie wyjaśniające "dlaczego", a nie tylko "jak"
+- Przykłady z życia wzięte (roboty, samochody autonomiczne, magazyny)
+- Gotowe przepisy (recipes), które możesz uruchomić i modyfikować
 
 <https://github.com/user-attachments/assets/bb444b93-d6af-4e25-8bd0-ca5891b26276>
 
-## Latest Updates
+---
 
-| **Date** | **Recipe** | **Model** | **Description** |
+## Najnowsze aktualizacje (Latest Updates)
+
+| **Data** | **Przepis (Recipe)** | **Model** | **Opis** |
 |----------|------------|-----------|-----------------|
-| Feb 4 | [Worker Safety in a Classical Warehouse](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/inference/reason2/worker_safety/inference.html) | Cosmos Reason 2 | Zero-shot industrial safety compliance and hazard detection in classical warehouse environments using context-aware prompt engineering |
-| Jan 30 | [Prompt Guide](https://nvidia-cosmos.github.io/cosmos-cookbook/core_concepts/prompt_guide/reason_guide.html) | Cosmos Reason 2 | Inference Prompt Guide |
-| Jan 29 | [Video Search and Summarization with Cosmos Reason](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/inference/reason2/vss/inference.html) | Cosmos Reason 2 | GPU-accelerated video analysis pipeline for large-scale video summarization, Q&A, and live stream alerts across warehouses, factories, retail, and smart cities |
-| Jan 28 | [Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/post_training/predict2/cosmos_policy/post_training.html) | Cosmos Predict 2 | State-of-the-art robot policy through latent frame injection for visuomotor control achieving 98.5% on LIBERO, 67.1% on RoboCasa, and 93.6% on ALOHA |
-| Jan 27 | [Physical Plausibility Prediction with Cosmos Reason 2](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/post_training/reason2/physical-plausibility-check/post_training.html) | Cosmos Reason 2 | Supervised fine-tuning for physical plausibility prediction using VideoPhy-2 dataset with improved zero-shot and SFT performance |
-| Jan 26 | [Intelligent Transportation Post-Training with Cosmos Reason 2](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/post_training/reason2/intelligent-transportation/post_training.html) | Cosmos Reason 2 | Post-training Cosmos Reason 2 for intelligent transportation scene understanding using WovenTraffic Safety dataset |
+| 4 lut | [Bezpieczeństwo pracowników w klasycznym magazynie](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/inference/reason2/worker_safety/inference.html) | Cosmos Reason 2 | Wykrywanie zagrożeń i zgodności z przepisami BHP w środowisku magazynowym bez wcześniejszego treningu (zero-shot) |
+| 30 sty | [Przewodnik po promptach](https://nvidia-cosmos.github.io/cosmos-cookbook/core_concepts/prompt_guide/reason_guide.html) | Cosmos Reason 2 | Jak efektywnie pisać zapytania do modelu |
+| 29 sty | [Wyszukiwanie i podsumowywanie wideo z Cosmos Reason](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/inference/reason2/vss/inference.html) | Cosmos Reason 2 | Przyśpieszona na GPU analiza dużych zbiorów wideo dla magazynów, fabryk i smart city |
+| 28 sty | [Cosmos Policy: Dostrajanie modeli wideo dla kontroli wizuomotorycznej](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/post_training/predict2/cosmos_policy/post_training.html) | Cosmos Predict 2 | Zaawansowany model polityki robota osiągający 98.5% skuteczności na LIBERO |
+| 27 sty | [Przewidywanie wiarygodności fizycznej z Cosmos Reason 2](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/post_training/reason2/physical-plausibility-check/post_training.html) | Cosmos Reason 2 | Trenowanie nadzorowane do przewidywania, czy zjawisko na wideo jest fizycznie możliwe |
+| 26 sty | [Post-trening transportu inteligentnego z Cosmos Reason 2](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/post_training/reason2/intelligent-transportation/post_training.html) | Cosmos Reason 2 | Dostrajanie modelu do rozumienia scen drogowych |
 
-## Upcoming Activities
+## Nadchodzące wydarzenia (Upcoming Activities)
 
 ### NVIDIA GTC 2026
 
-Register for [NVIDIA GTC](https://www.nvidia.com/gtc/) happening **March 16–19, 2026**, and add the [Cosmos sessions](https://www.nvidia.com/gtc/session-catalog/?sessions=S81667,CWES81669,DLIT81644,DLIT81698,S81836,S81488,S81834,DLIT81774,CWES81733,CWES81568) to your calendar. Don't miss the must-see keynote from CEO Jensen Huang at SAP Center on Monday, March 16 at 11:00 a.m. PT.
+Zarejestruj się na [NVIDIA GTC](https://www.nvidia.com/gtc/) odbywającą się **16–19 marca 2026** i dodaj [sesje Cosmos](https://www.nvidia.com/gtc/session-catalog/?sessions=S81667,CWES81669,DLIT81644,DLIT81698,S81836,S81488,S81834,DLIT81774,CWES81733,CWES81568) do swojego kalendarza. Nie przegap keynote CEO Jensena Huanga w SAP Center w poniedziałek 16 marca o 11:00 czasu pacyficznego.
 
 ### NVIDIA Cosmos Cookoff
 
-Introducing the **[NVIDIA Cosmos Cookoff](https://luma.com/nvidia-cosmos-cookoff)** — a virtual, four-week physical AI challenge running **January 29 – February 26** for robotics, AV, and vision AI builders.
+Przedstawiamy **[NVIDIA Cosmos Cookoff](https://luma.com/nvidia-cosmos-cookoff)** — wirtualny, czterotygodniowy konkurs Physical AI trwający **29 stycznia – 26 lutego** dla twórców robotyki, pojazdów autonomicznych i AI wizyjnego.
 
-Build with NVIDIA Cosmos Reason and Cosmos Cookbook recipes—from egocentric robot reasoning to physical plausibility checks and traffic-aware models for a chance to win **$5,000**, an **NVIDIA DGX Spark**, and more!
+Buduj z NVIDIA Cosmos Reason i przepisami Cosmos Cookbook—od rozumowania egocentrycznego robotów po sprawdzanie wiarygodności fizycznej i modele świadome ruchu drogowego, aby wygrać **$5,000**, **NVIDIA DGX Spark** i więcej!
 
-**[Register Now →](https://luma.com/nvidia-cosmos-cookoff)**
+**[Zarejestruj się teraz →](https://luma.com/nvidia-cosmos-cookoff)**
 
-Sponsored by Nebius and Milestone.
+Sponsorowane przez Nebius i Milestone.
 
-## Prerequisites
+## Wymagania wstępne (Prerequisites)
 
-| Use Case | Linux (Ubuntu) | macOS | Windows |
+**🎓 Wyjaśnienie dla studentów:**  
+Przed rozpoczęciem pracy z Cosmos, musisz przygotować odpowiednie środowisko. Cosmos używa zaawansowanych modeli AI, które wymagają dużej mocy obliczeniowej (GPU), dlatego lista wymagań może wydawać się skomplikowana. Poniżej wyjaśniamy, czego potrzebujesz.
+
+| Przypadek użycia | Linux (Ubuntu) | macOS | Windows |
 |----------|----------------|-------|---------|
-| Running cookbook recipes (GPU workflows) | ✅ Supported | ❌ | ❌ |
-| Local documentation & contribution | ✅ Supported | ✅ Supported | ⚠️ WSL recommended |
+| Uruchamianie przepisów (GPU workflows) | ✅ Wspierane | ❌ | ❌ |
+| Lokalna dokumentacja i współtworzenie | ✅ Wspierane | ✅ Wspierane | ⚠️ WSL zalecane |
 
-### For Documentation & Contribution (All Platforms)
+### Dla dokumentacji i współtworzenia (wszystkie platformy)
 
-- **Git** with [Git LFS](#1-install-git-lfs-required)
-- **Python**: Version 3.10+
-- **Internet access** for cloning and dependencies
+- **Git** z [Git LFS](#1-zainstaluj-git-lfs-wymagane)
+- **Python**: Wersja 3.10 lub nowsza
+- **Dostęp do internetu** do klonowania i pobierania zależności
 
-### For Running Cookbook Recipes (Ubuntu Only)
+### Dla uruchamiania przepisów Cookbook (tylko Ubuntu)
 
-Full GPU workflows require an Ubuntu Linux environment with NVIDIA GPUs.
+Pełne przepływy pracy GPU wymagają środowiska Ubuntu Linux z kartami graficznymi NVIDIA.
 
-→ See **[Getting Started](https://nvidia-cosmos.github.io/cosmos-cookbook/getting_started/setup.html)** for complete hardware and software requirements.
+→ Zobacz **[Rozpoczęcie pracy](https://nvidia-cosmos.github.io/cosmos-cookbook/getting_started/setup.html)** dla pełnych wymagań sprzętowych i programowych.
 
-→ Or **[Deploy on Cloud](https://nvidia-cosmos.github.io/cosmos-cookbook/getting_started/cloud_platform.html)** (Nebius, Brev, and more to come) for ready-to-launch GPU instances.
+→ Lub **[Wdrożenie w chmurze](https://nvidia-cosmos.github.io/cosmos-cookbook/getting_started/cloud_platform.html)** (Nebius, Brev i więcej wkrótce) dla gotowych instancji GPU.
 
-## Quick Start
+## Szybki start (Quick Start)
 
-### 1. Install Git LFS (Required)
+### 1. Zainstaluj Git LFS (Wymagane)
 
-> ⚠️ **Important**: This repository contains many media files (videos, images, demonstrations). Git LFS is **required** to clone and work with this repository properly.
+**🎓 Wyjaśnienie:** Git LFS (Large File Storage) to rozszerzenie Git, które pozwala efektywnie zarządzać dużymi plikami (wideo, obrazy). W tym repozytorium są setki plików wideo demonstracyjnych, więc Git LFS jest **niezbędne**.
+
+> ⚠️ **Ważne**: To repozytorium zawiera wiele plików multimedialnych (wideo, obrazy, demonstracje). Git LFS jest **wymagane** do prawidłowego klonowania i pracy z tym repozytorium.
 
 ```bash
-# Ubuntu/Debian (recommended)
+# Ubuntu/Debian (zalecane)
 sudo apt update && sudo apt install git-lfs
 
-# Enable Git LFS globally
+# Włącz Git LFS globalnie
 git lfs install
 ```
 
-For other platforms (macOS, Windows, Fedora), see the official installation guide at **[git-lfs.com](https://git-lfs.com/)**.
+Dla innych platform (macOS, Windows, Fedora), zobacz oficjalny przewodnik instalacji na **[git-lfs.com](https://git-lfs.com/)**.
 
-If you've already cloned without LFS, fetch the media files with:
+Jeśli już sklonowałeś repozytorium bez LFS, pobierz pliki multimedialne za pomocą:
 
 ```bash
 git lfs pull
 ```
 
-### 2. Install System Dependencies
+### 2. Zainstaluj zależności systemowe
+
+**🎓 Wyjaśnienie:** 
+- **uv** - szybki menedżer pakietów Python (alternatywa dla pip), który przyspiesza instalację bibliotek
+- **just** - narzędzie do uruchamiania poleceń (podobne do make), które ułatwia wykonywanie typowych zadań
 
 ```bash
-# Install uv (fast Python package manager)
+# Zainstaluj uv (szybki menedżer pakietów Python)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env
 
-# Install just (command runner)
+# Zainstaluj just (narzędzie do uruchamiania poleceń)
 uv tool install -U rust-just
 ```
 
-For other platforms, see **[astral.sh/uv](https://astral.sh/uv/)** for installation instructions.
+Dla innych platform zobacz **[astral.sh/uv](https://astral.sh/uv/)** dla instrukcji instalacji.
 
-### 3. Clone and Setup Repository
+### 3. Sklonuj i skonfiguruj repozytorium
+
+**🎓 Wyjaśnienie:** Ten krok pobiera całe repozytorium na Twój komputer i instaluje wszystkie potrzebne biblioteki Python.
 
 ```bash
-# Clone the repository
+# Sklonuj repozytorium
 git clone https://github.com/nvidia-cosmos/cosmos-cookbook.git
 cd cosmos-cookbook
 
-# Install dependencies and setup
+# Zainstaluj zależności i skonfiguruj środowisko
 just install
 ```
 
-### 4. Explore the Documentation
+### 4. Przeglądaj dokumentację
+
+**🎓 Wyjaśnienie:** Możesz otworzyć dokumentację lokalnie w przeglądarce, co pozwala na czytanie offline i szybsze przeglądanie.
 
 ```bash
-# Serve documentation locally
-just serve-external  # For public documentation
-# or
-just serve-internal   # For internal documentation (if applicable)
+# Uruchom dokumentację lokalnie
+just serve-external  # Dla dokumentacji publicznej
+# lub
+just serve-internal   # Dla dokumentacji wewnętrznej (jeśli dotyczy)
 ```
 
-Then open [http://localhost:8000](http://localhost:8000) in your browser.
+Następnie otwórz [http://localhost:8000](http://localhost:8000) w przeglądarce.
 
-## Repository Structure
+## Struktura repozytorium (Repository Structure)
 
-The Cosmos Cookbook is organized into two main directories:
+**🎓 Wyjaśnienie:** Repozytorium jest podzielone na dwie główne części: dokumentację (`docs/`) i kod (`scripts/`). To ułatwia naukę - możesz najpierw przeczytać o tym, jak coś działa, a potem zobaczyć kod implementacji.
+
+Cosmos Cookbook jest zorganizowany w dwa główne katalogi:
 
 ### `docs/`
 
-Contains the source documentation in markdown files:
+Zawiera źródłową dokumentację w plikach markdown:
 
-- Technical guides and workflows
-- End-to-end examples and case studies
-- Step-by-step recipes and tutorials
-- Getting started guides
+- **Przewodniki techniczne** - szczegółowe wyjaśnienia jak działają poszczególne komponenty
+- **Przykłady end-to-end** - kompletne przypadki użycia od początku do końca
+- **Przepisy krok po kroku** - gotowe do uruchomienia przykłady
+- **Przewodniki startowe** - pomoc w rozpoczęciu pracy
 
 ### `scripts/`
 
-Contains executable scripts referenced throughout the cookbook:
+Zawiera wykonywalne skrypty, do których odwołuje się dokumentacja:
 
-- Data processing and curation pipelines
-- Model evaluation and quality control scripts
-- Configuration files for post-training tasks
-- Automation tools and utilities
+- **Przetwarzanie i kuratorowanie danych** - przygotowanie zbiorów danych do treningu
+- **Ewaluacja modeli** - skrypty do oceny jakości modeli
+- **Konfiguracje post-trainingu** - pliki konfiguracyjne do dostrajania modeli
+- **Narzędzia automatyzacji** - utility do automatyzacji powtarzalnych zadań
 
-This structure separates documentation from implementation, making it easy to navigate between reading about workflows and executing the corresponding scripts.
+Ta struktura oddziela dokumentację od implementacji, ułatwiając nawigację między czytaniem o przepływach pracy a wykonywaniem odpowiednich skryptów.
 
-## Media File Guidelines
+## Wskazówki dotyczące plików multimedialnych (Media File Guidelines)
 
-When contributing media files, prefer `.mp4` over `.gif`:
+**🎓 Wyjaśnienie:** Jeśli będziesz dodawać własne materiały wideo do projektu, ważne jest, aby używać odpowiedniego formatu.
 
-- **Better quality** — MP4 supports full color depth vs GIF's 256-color limit
-- **Smaller file size** — Modern video codecs compress far more efficiently
-- **Audio support** — MP4 can include narration when needed
+Podczas dodawania plików multimedialnych, preferuj `.mp4` zamiast `.gif`:
 
-Use **H.264** encoding for universal browser compatibility.
+- **Lepsza jakość** — MP4 wspiera pełną głębię kolorów vs limit 256 kolorów w GIF
+- **Mniejszy rozmiar pliku** — Nowoczesne kodeki wideo kompresują znacznie efektywniej
+- **Wsparcie dla audio** — MP4 może zawierać narrację gdy potrzeba
 
-## Available Commands
+Używaj kodowania **H.264** dla uniwersalnej kompatybilności z przeglądarkami.
+
+## Dostępne polecenia (Available Commands)
+
+**🎓 Wyjaśnienie:** Narzędzie `just` pozwala uruchamiać często używane polecenia za pomocą prostych komend. Poniżej znajdują się najważniejsze polecenia, których będziesz używać.
 
 ```bash
-# Development
-just install          # Install dependencies and setup
-just setup            # Setup pre-commit hooks
-just serve-external   # Serve public documentation locally
-just serve-internal   # Serve internal documentation locally
+# Rozwój (Development)
+just install          # Zainstaluj zależności i skonfiguruj środowisko
+just setup            # Skonfiguruj hooki pre-commit (sprawdzanie kodu przed commitem)
+just serve-external   # Uruchom publiczną dokumentację lokalnie
+just serve-internal   # Uruchom wewnętrzną dokumentację lokalnie
 
-# Quality Control
-just lint            # Run linting and formatting
-just test            # Run all tests and validation
+# Kontrola jakości (Quality Control)
+just lint            # Uruchom sprawdzanie i formatowanie kodu
+just test            # Uruchom wszystkie testy i walidację
 
-# Continuous Integration
-just ci-lint         # Run CI linting checks
-just ci-deploy-internal         # Deploy internal documentation
-just ci-deploy-external         # Deploy external documentation
+# Ciągła integracja (Continuous Integration)
+just ci-lint         # Uruchom sprawdzanie CI lintingu
+just ci-deploy-internal         # Wdróż dokumentację wewnętrzną
+just ci-deploy-external         # Wdróż dokumentację zewnętrzną
 ```
 
-## Contributing & Support
+## Współtworzenie i wsparcie (Contributing & Support)
 
-- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the cookbook
-- **Report Issues**: Use [GitHub Issues](https://github.com/nvidia-cosmos/cosmos-cookbook/issues) for bugs and feature requests
-- **Share Success Stories**: We love hearing how you use Cosmos models creatively
+**🎓 Wyjaśnienie:** Cosmos Cookbook to projekt open-source, co oznacza, że każdy może współtworzyć i ulepszać ten projekt. Jeśli znajdziesz błąd, masz pomysł na ulepszenie lub chcesz dodać własny przepis - jesteś mile widziany!
 
-## License and Contact
+- **[Przewodnik współtworzenia](CONTRIBUTING.md)** - Jak współtworzyć cookbook
+- **Zgłaszanie problemów**: Użyj [GitHub Issues](https://github.com/nvidia-cosmos/cosmos-cookbook/issues) dla błędów i próśb o nowe funkcje
+- **Dziel się sukcesami**: Uwielbiamy słyszeć o kreatywnych zastosowaniach modeli Cosmos
 
-This project will download and install additional third-party open source software projects. Review the license terms of these open source projects before use.
+## Licencja i kontakt (License and Contact)
 
-NVIDIA Cosmos source code is released under the [Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0).
+**🎓 Wyjaśnienie:** 
+- **Licencja** określa, jak możesz używać tego oprogramowania
+- **Apache 2 License** to licencja open-source pozwalająca na swobodne użycie, modyfikację i dystrybucję kodu
+- **NVIDIA Open Model License** reguluje użycie samych modeli AI
 
-NVIDIA Cosmos models are released under the [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license). For a custom license, please contact [cosmos-license@nvidia.com](mailto:cosmos-license@nvidia.com).
+Ten projekt pobierze i zainstaluje dodatkowe projekty open source innych firm. Przejrzyj warunki licencji tych projektów przed użyciem.
+
+Kod źródłowy NVIDIA Cosmos jest wydany na licencji [Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0).
+
+Modele NVIDIA Cosmos są wydane na licencji [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license). W sprawie niestandardowej licencji skontaktuj się z [cosmos-license@nvidia.com](mailto:cosmos-license@nvidia.com).
